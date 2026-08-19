@@ -2,79 +2,159 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Peterson Ramos — Portfólio 2026</title>
   <meta name="description" content="Portfólio de Peterson Ramos — Senior Product Designer & Project Manager.">
   <meta name="author" content="Peterson Ramos">
   <link rel="canonical" href="https://petersonramos.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Peterson Ramos — Portfólio 2026">
+  <meta property="og:description" content="Portfólio de Peterson Ramos — Senior Product Designer & Project Manager.">
+  <meta property="og:url" content="https://petersonramos.com.br/">
+  <meta property="og:image" content="https://petersonramos.com.br/portifolio/paginas/pagina-01.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
+    html {
+      background: #0f0f0f;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
       background: #0f0f0f;
       color: #f5f5f5;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem clamp(1rem, 4vw, 2rem);
+      padding-top: max(0.75rem, env(safe-area-inset-top));
+      background: rgba(15, 15, 15, 0.82);
+      backdrop-filter: saturate(160%) blur(12px);
+      -webkit-backdrop-filter: saturate(160%) blur(12px);
+      border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+    }
+    .brand {
       font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
-    .viewer {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+    .brand span {
+      display: block;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin-top: 0.15rem;
     }
-    .fallback {
-      min-height: 100%;
+    .actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      white-space: nowrap;
+      border: 1px solid rgba(245, 245, 245, 0.25);
+      color: #f5f5f5;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-primary {
+      background: #f5f5f5;
+      color: #0f0f0f;
+      border-color: #f5f5f5;
+    }
+    .btn:hover { background: rgba(245, 245, 245, 0.14); }
+    .btn-primary:hover { background: #ffffff; color: #0f0f0f; }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 3vw, 2rem) 3rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem;
+      gap: clamp(0.75rem, 2vw, 1.25rem);
+    }
+    .pagina {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      background: #1a1a1a;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    footer {
+      padding: 2rem clamp(1rem, 4vw, 2rem);
+      padding-bottom: max(2rem, env(safe-area-inset-bottom));
       text-align: center;
-      background:
-        radial-gradient(ellipse at top, rgba(255, 255, 255, 0.08), transparent 55%),
-        linear-gradient(160deg, #1a1a1a 0%, #0b0b0b 100%);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      opacity: 0.7;
+      border-top: 1px solid rgba(245, 245, 245, 0.1);
     }
-    .fallback h1 {
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
-      font-weight: 400;
-      letter-spacing: 0.02em;
-    }
-    .fallback p {
-      max-width: 28rem;
-      line-height: 1.5;
-      opacity: 0.8;
-    }
-    .fallback a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.85rem 1.4rem;
-      color: #0f0f0f;
-      background: #f5f5f5;
-      text-decoration: none;
-      font-family: system-ui, -apple-system, sans-serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .fallback a:hover { opacity: 0.9; }
+    footer a { color: #f5f5f5; }
   </style>
 </head>
 <body>
-  <iframe
-    class="viewer"
-    src="/portifolio/portifolio-peterson-2026.pdf"
-    title="Portfólio Peterson Ramos 2026"
-  ></iframe>
-
-  <noscript>
-    <div class="fallback">
-      <h1>Peterson Ramos</h1>
-      <p>Abra o portfólio 2026 em PDF.</p>
-      <a href="/portifolio/portifolio-peterson-2026.pdf">Abrir portfólio</a>
+  <header class="topbar">
+    <div class="brand">
+      Peterson Ramos
+      <span>Portfólio 2026</span>
     </div>
-  </noscript>
+    <div class="actions">
+      <a class="btn" href="https://www.linkedin.com/in/petersonramos" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-primary" href="/portifolio/portifolio-peterson-2026.pdf" target="_blank" rel="noopener">PDF</a>
+    </div>
+  </header>
+
+  <main>
+    <img class="pagina" src="/portifolio/paginas/pagina-01.webp" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" alt="Portfólio Peterson Ramos 2026, página 01 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 02 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-03.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 03 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-04.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 04 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-05.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 05 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-06.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 06 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-07.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 07 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-08.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 08 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-09.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 09 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-10.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 10 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-11.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 11 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-12.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 12 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-13.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 13 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-14.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 14 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-15.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 15 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-16.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 16 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-17.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 17 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-18.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 18 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-19.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 19 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-20.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 20 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-21.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 21 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-22.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 22 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-23.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 23 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-24.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 24 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-25.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 25 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-26.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 26 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-27.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 27 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-28.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 28 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-29.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 29 de 30">
+    <img class="pagina" src="/portifolio/paginas/pagina-30.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 30 de 30">
+  </main>
+
+  <footer>
+    <p>Peterson Ramos, Senior Product Designer &amp; Project Manager.</p>
+    <p><a href="mailto:petersondrs@gmail.com">petersondrs@gmail.com</a> · <a href="https://www.linkedin.com/in/petersonramos" target="_blank" rel="noopener">linkedin.com/in/petersonramos</a></p>
+    <p><a href="/portifolio/portifolio-peterson-2026.pdf" target="_blank" rel="noopener">Baixar o portfólio em PDF</a></p>
+  </footer>
 </body>
 </html>
