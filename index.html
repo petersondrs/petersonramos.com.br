@@ -1,160 +1,82 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Peterson Ramos — Portfólio 2026</title>
-  <meta name="description" content="Portfólio de Peterson Ramos — Senior Product Designer & Project Manager.">
-  <meta name="author" content="Peterson Ramos">
-  <link rel="canonical" href="https://petersonramos.com.br/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Peterson Ramos — Portfólio 2026">
-  <meta property="og:description" content="Portfólio de Peterson Ramos — Senior Product Designer & Project Manager.">
-  <meta property="og:url" content="https://petersonramos.com.br/">
-  <meta property="og:image" content="https://petersonramos.com.br/portifolio/paginas/pagina-01.webp">
-  <meta name="twitter:card" content="summary_large_image">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html {
-      background: #0f0f0f;
-      -webkit-text-size-adjust: 100%;
-    }
-    body {
-      background: #0f0f0f;
-      color: #f5f5f5;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
+<!DOCTYPE html><html lang="pt-BR" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><!-- Idioma de entrada: escolha salva no menu ou, sem ela, o idioma do
+		     aparelho (PT, EN ou ES; outro qualquer → EN). Roda antes de pintar,
+		     para não piscar o idioma errado. Robôs de busca ficam na URL pedida.
+		     Fora da 404 (noindex): lá a URL não existe e o redirecionamento
+		     entraria em laço. --><script>(function(){const langConfig = "{\"current\":\"pt\",\"key\":\"pr-lang\",\"fallback\":\"en\"}";
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.75rem clamp(1rem, 4vw, 2rem);
-      padding-top: max(0.75rem, env(safe-area-inset-top));
-      background: rgba(15, 15, 15, 0.82);
-      backdrop-filter: saturate(160%) blur(12px);
-      -webkit-backdrop-filter: saturate(160%) blur(12px);
-      border-bottom: 1px solid rgba(245, 245, 245, 0.1);
-    }
-    .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(0.95rem, 3vw, 1.15rem);
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-    }
-    .brand span {
-      display: block;
-      font-family: system-ui, -apple-system, sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      opacity: 0.55;
-      margin-top: 0.15rem;
-    }
-    .actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
-    .btn {
-      display: inline-block;
-      padding: 0.55rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      letter-spacing: 0.03em;
-      text-decoration: none;
-      white-space: nowrap;
-      border: 1px solid rgba(245, 245, 245, 0.25);
-      color: #f5f5f5;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-primary {
-      background: #f5f5f5;
-      color: #0f0f0f;
-      border-color: #f5f5f5;
-    }
-    .btn:hover { background: rgba(245, 245, 245, 0.14); }
-    .btn-primary:hover { background: #ffffff; color: #0f0f0f; }
+			(function () {
+				var c = JSON.parse(langConfig);
+				var supported = ['pt', 'en', 'es'];
+				var want = null;
+				try {
+					want = localStorage.getItem(c.key);
+				} catch (e) {}
+				if (supported.indexOf(want) < 0) {
+					// Só na entrada: vindo de outra página do site, respeita a URL
+					// (vale também para quem trocou de idioma sem storage).
+					if (document.referrer.indexOf(location.origin + '/') === 0) return;
+					if (/bot|crawl|spider|slurp|lighthouse|headless/i.test(navigator.userAgent)) return;
+					var device = ((navigator.languages && navigator.languages[0]) || navigator.language || '')
+						.slice(0, 2)
+						.toLowerCase();
+					want = supported.indexOf(device) >= 0 ? device : c.fallback;
+				}
+				if (want === c.current) return;
+				var path = location.pathname.replace(/^\/(en|es)(?=\/|$)/, '') || '/';
+				var target = want === 'pt' ? path : '/' + want + path;
+				location.replace(target + location.search + location.hash);
+			})();
+		})();</script><meta name="viewport" content="width=device-width, initial-scale=1"><script>(function(){const gtmId = "GTM-MZGNXW39";
+const consentKey = "pr-consent";
 
-    main {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 3vw, 2rem) 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: clamp(0.75rem, 2vw, 1.25rem);
-    }
-    .pagina {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      background: #1a1a1a;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-    }
-
-    footer {
-      padding: 2rem clamp(1rem, 4vw, 2rem);
-      padding-bottom: max(2rem, env(safe-area-inset-bottom));
-      text-align: center;
-      font-size: 0.85rem;
-      line-height: 1.7;
-      opacity: 0.7;
-      border-top: 1px solid rgba(245, 245, 245, 0.1);
-    }
-    footer a { color: #f5f5f5; }
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand">
-      Peterson Ramos
-      <span>Portfólio 2026</span>
-    </div>
-    <div class="actions">
-      <a class="btn" href="https://www.linkedin.com/in/petersonramos" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn btn-primary" href="/portifolio/portifolio-peterson-2026.pdf" target="_blank" rel="noopener">PDF</a>
-    </div>
-  </header>
-
-  <main>
-    <img class="pagina" src="/portifolio/paginas/pagina-01.webp" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" alt="Portfólio Peterson Ramos 2026, página 01 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 02 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-03.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 03 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-04.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 04 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-05.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 05 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-06.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 06 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-07.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 07 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-08.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 08 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-09.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 09 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-10.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 10 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-11.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 11 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-12.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 12 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-13.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 13 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-14.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 14 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-15.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 15 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-16.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 16 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-17.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 17 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-18.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 18 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-19.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 19 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-20.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 20 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-21.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 21 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-22.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 22 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-23.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 23 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-24.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 24 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-25.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 25 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-26.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 26 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-27.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 27 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-28.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 28 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-29.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 29 de 30">
-    <img class="pagina" src="/portifolio/paginas/pagina-30.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Portfólio Peterson Ramos 2026, página 30 de 30">
-  </main>
-
-  <footer>
-    <p>Peterson Ramos, Senior Product Designer &amp; Project Manager.</p>
-    <p><a href="mailto:petersondrs@gmail.com">petersondrs@gmail.com</a> · <a href="https://www.linkedin.com/in/petersonramos" target="_blank" rel="noopener">linkedin.com/in/petersonramos</a></p>
-    <p><a href="/portifolio/portifolio-peterson-2026.pdf" target="_blank" rel="noopener">Baixar o portfólio em PDF</a></p>
-  </footer>
-</body>
-</html>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			window.gtag = gtag;
+			var granted = false;
+			try {
+				granted = localStorage.getItem(consentKey) === 'granted';
+			} catch (e) {}
+			gtag('consent', 'default', {
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				analytics_storage: granted ? 'granted' : 'denied',
+				wait_for_update: 500,
+			});
+			// Snippet oficial do GTM.
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', gtmId);
+		})();</script><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="generator" content="Astro v6.4.8"><title>Peterson Ramos | Sênior UX/UI Designer · Portfólio</title><meta name="description" content="Portfólio de Peterson Ramos, Sênior UX/UI Designer: design de produto, Design System, UX Research e front-end para fintech, SaaS e ambientes regulados."><link rel="canonical" href="https://petersonramos.com.br/"><link rel="alternate" hreflang="pt-BR" href="https://petersonramos.com.br/"><link rel="alternate" hreflang="en-US" href="https://petersonramos.com.br/en/"><link rel="alternate" hreflang="es-419" href="https://petersonramos.com.br/es/"><link rel="alternate" hreflang="x-default" href="https://petersonramos.com.br/en/"><meta property="og:type" content="website"><meta property="og:site_name" content="Peterson Ramos"><meta property="og:locale" content="pt_BR"><meta property="og:title" content="Peterson Ramos | Sênior UX/UI Designer · Portfólio"><meta property="og:description" content="Portfólio de Peterson Ramos, Sênior UX/UI Designer: design de produto, Design System, UX Research e front-end para fintech, SaaS e ambientes regulados."><meta property="og:url" content="https://petersonramos.com.br/"><meta property="og:image" content="https://petersonramos.com.br/_astro/peterson-ramos-site-image-pt.Bibpddci_Z1VbihT.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Peterson Ramos, Sênior UX/UI Designer"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Peterson Ramos","jobTitle":"Sênior UX/UI Designer","email":"mailto:petersondrs@gmail.com","sameAs":["https://www.linkedin.com/in/petersonramos"],"knowsAbout":["UX Design","UI Design","Design de produto","Design System","UX Research","Arquitetura da informação","Prototipação","Usabilidade","Acessibilidade (WCAG)","Interação Humano-Computador","Figma","Front-end","DesignOps","Service Design","Discovery de produto","IA generativa aplicada ao design","Fintech","SaaS","B2B"],"alumniOf":{"@type":"CollegeOrUniversity","name":"PUC-Rio"},"inLanguage":"pt-BR","url":"https://petersonramos.com.br/"}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@500..900&family=Source+Serif+4:opsz,wght@8..60,350..700&display=swap" rel="stylesheet"><style>html.lenis,html.lenis body{height:auto}.lenis:not(.lenis-autoToggle).lenis-stopped{overflow:clip}.lenis [data-lenis-prevent],.lenis [data-lenis-prevent-wheel],.lenis [data-lenis-prevent-touch],.lenis [data-lenis-prevent-vertical],.lenis [data-lenis-prevent-horizontal]{overscroll-behavior:contain}.lenis.lenis-smooth iframe{pointer-events:none}.lenis.lenis-autoToggle{transition-property:overflow;transition-duration:1ms;transition-behavior:allow-discrete}
+.case-button[data-astro-cid-5yl5xskq]{position:relative;display:inline-flex;align-items:center;font-family:var(--pr-font-display);font-weight:700;font-size:calc(var(--pr-heading-h5-size) * .75);line-height:1;text-transform:uppercase;white-space:nowrap}.case-button[data-astro-cid-5yl5xskq] .link-marker,.case-button[data-astro-cid-5yl5xskq] .link-marker-fill-text{padding:.5rem 1rem}.case-button[data-astro-cid-5yl5xskq] .link-marker{margin:0}.case-cursor[data-astro-cid-zuo2wnby]{display:none;position:fixed;top:0;left:0;z-index:80;pointer-events:none;opacity:0;visibility:hidden;will-change:transform;transition:opacity 80ms ease}html[data-case-cursor-ready] .case-cursor[data-astro-cid-zuo2wnby]{display:block}.case-cursor[data-astro-cid-zuo2wnby].is-on{opacity:1;visibility:visible}@media(prefers-reduced-motion:reduce){.case-cursor[data-astro-cid-zuo2wnby]{transition:none}}html[data-case-cursor-ready] [data-case-hero]{cursor:pointer}html[data-case-cursor-ready] [data-case-hero] .case-highlight__btn{display:none}html[data-case-cursor-ready] [data-case-hero]:focus-visible .case-highlight__btn{display:block}.case-highlight__device[data-astro-cid-ecgrnnyh]{width:min(100%,calc((100svh - 2 * var(--pr-home-case-padding-y) - 14rem) * var(--device-ratio)))}@media(min-width:48rem){.case-highlight__device[data-astro-cid-ecgrnnyh]{width:min(90.52%,calc((100svh - 2 * var(--pr-home-case-padding-y)) * var(--device-ratio)))}}.case-highlight__btn[data-astro-cid-ecgrnnyh]{position:absolute;z-index:1;left:50%;top:42%;translate:-50% -50%}.case-highlight[data-astro-cid-ecgrnnyh]:focus-visible{outline:none}.case-highlight[data-astro-cid-ecgrnnyh]:focus-visible:after{content:"";position:absolute;inset:.75rem;z-index:2;border:4px solid var(--pr-gray-0);pointer-events:none}@media(prefers-reduced-motion:no-preference){@supports (animation-timeline: view()){.case-highlight[data-astro-cid-ecgrnnyh]{view-timeline:--home-case block}.case-highlight__copy[data-astro-cid-ecgrnnyh]{animation:home-case-copy linear both;animation-timeline:--home-case;animation-range:cover;will-change:translate}}}@keyframes home-case-copy{0%{translate:0 6svh}to{translate:0 -6svh}}.hero-photo[data-astro-cid-pgpo2ev5]{position:relative;flex:1;min-height:0;margin:var(--pr-space-lg) calc(-1 * var(--pr-page-padding-x)) 0}.hero-photo[data-astro-cid-pgpo2ev5] img[data-astro-cid-pgpo2ev5]{top:max(0px,100% - 100vw * .854);left:50%;width:100%;translate:-50% 0}@media(min-width:75rem),(min-width:48rem)and (orientation:landscape){.hero-copy[data-astro-cid-pgpo2ev5],.hero-photo[data-astro-cid-pgpo2ev5]{--hero-photo-top: calc( var(--pr-page-padding-top) + var(--pr-nav-size) + var(--pr-page-title-gap) )}.hero-copy[data-astro-cid-pgpo2ev5]{translate:0 max(calc(.11 * (100svh - var(--hero-photo-top)) - var(--pr-hero-name-line-height)),calc(-1 * (var(--pr-page-title-gap) - .5rem)))}.hero-photo[data-astro-cid-pgpo2ev5]{position:absolute;inset:var(--hero-photo-top) 0 0 calc(var(--pr-page-padding-x) + (100% - 2 * var(--pr-page-padding-x)) * .28);margin:0}.hero-photo[data-astro-cid-pgpo2ev5] img[data-astro-cid-pgpo2ev5]{top:auto;bottom:0;left:auto;right:clamp(1.5rem,3vw,3rem);width:auto;max-width:min(calc(var(--pr-hero-photo-width) * .8),100%);max-height:100%;translate:none}}@media(min-width:75rem){.hero-photo[data-astro-cid-pgpo2ev5] img[data-astro-cid-pgpo2ev5]{translate:0 2.1875rem}}
+</style><link rel="stylesheet" href="/_astro/Layout.BeTy4W3s.css"><link rel="stylesheet" href="/_astro/NavMenu.BUhfsTg2.css"></head> <body data-astro-cid-sckkx6r4> <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZGNXW39" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager" data-astro-cid-sckkx6r4></iframe> </noscript> <a href="#conteudo" class="skip-link" data-astro-cid-sckkx6r4>Pular para o conteúdo</a>  <main id="conteudo"> <section data-snap="start" class="relative flex min-h-svh flex-col overflow-hidden px-page-x pt-page-top" data-astro-cid-pgpo2ev5> <div class="flex h-nav box-content justify-end pb-title-gap" data-astro-cid-pgpo2ev5> <nav class="nav-fixed group flex items-center gap-md" aria-label="Menu principal" data-nav data-label-open="Abrir menu" data-label-close="Fechar menu" data-label-copied="Copiado" data-label-email-copied="E-mail copiado" data-lang-key="pr-lang" data-astro-cid-hviy6i6g>  <!-- Barra + painéis do menu (o Voltar fica de fora). --> <div class="relative shrink-0" data-nav-menu data-astro-cid-hviy6i6g> <div class="flex shadow-nav" data-astro-cid-hviy6i6g> <a href="/" class="flex size-nav items-center justify-center font-display font-black uppercase text-nav text-accent bg-gray-0 hover:bg-brand-light focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-dark" aria-label="Peterson Ramos, início" data-astro-cid-hviy6i6g>
+PR
+</a> <div id="nav-menu-links" class="nav-links" data-astro-cid-hviy6i6g> <ul class="m-0 flex min-w-0 list-none overflow-hidden whitespace-nowrap p-0" data-astro-cid-hviy6i6g> <li data-astro-cid-hviy6i6g> <a href="/sobre/" class="flex h-nav items-center px-nav-label-padding font-display font-black uppercase text-nav-label text-ink-inverted transition-colors bg-accent hover:bg-brand-dark focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-dark" data-astro-cid-hviy6i6g> <span class="nav-label" data-astro-cid-hviy6i6g>Sobre</span> </a> </li> <li data-astro-cid-hviy6i6g> <button type="button" class="flex h-nav cursor-pointer items-center border-0 px-nav-label-padding font-display font-black uppercase text-nav-label text-ink-inverted transition-colors bg-accent hover:bg-brand-dark focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-dark aria-expanded:bg-brand-dark" aria-expanded="false" aria-controls="nav-contact" data-contact-toggle data-astro-cid-hviy6i6g> <span class="nav-label" data-astro-cid-hviy6i6g>Contato</span> </button> </li> <li data-astro-cid-hviy6i6g> <button type="button" class="flex size-nav cursor-pointer items-center justify-center border-0 p-0 font-display font-black uppercase text-nav-label text-ink-inverted transition-colors bg-accent hover:bg-brand-dark focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-dark aria-expanded:bg-brand-dark" aria-expanded="false" aria-controls="nav-lang" aria-label="Idioma: Português" data-lang-toggle data-astro-cid-hviy6i6g> <span class="nav-label" data-astro-cid-hviy6i6g>pt</span> </button> </li> </ul> </div> <button type="button" class="flex size-nav cursor-pointer items-center justify-center border-0 p-0 text-ink-inverted transition-colors duration-300 bg-accent hover:bg-brand-dark focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-dark group-data-open:bg-gray-0 group-data-open:text-accent group-data-open:hover:bg-brand-light" aria-expanded="false" aria-controls="nav-menu-links" aria-label="Abrir menu" data-nav-toggle data-astro-cid-hviy6i6g> <!-- Hambúrguer que vira X (Figma: icon/bars → icon/close, traço 2) --> <svg class="block size-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true" data-astro-cid-hviy6i6g> <path class="nav-bar nav-bar-top" d="M3 6H21" data-astro-cid-hviy6i6g></path> <path class="nav-bar nav-bar-mid" d="M3 12H21" data-astro-cid-hviy6i6g></path> <path class="nav-bar nav-bar-bot" d="M3 18H21" data-astro-cid-hviy6i6g></path> </svg> </button> </div> <!-- Outros idiomas: quadrados empilhados logo abaixo do item de idioma,
+		     que é o último antes do ✕. --> <div id="nav-lang" class="nav-lang absolute top-full right-nav z-20 pt-1" data-astro-cid-hviy6i6g> <ul class="m-0 flex list-none flex-col p-0 shadow-nav" data-astro-cid-hviy6i6g> <li data-astro-cid-hviy6i6g> <a href="/en/" hreflang="en" lang="en" aria-label="English" data-lang-choice="en" class="flex size-nav items-center justify-center font-display font-black uppercase text-nav-label text-ink-inverted transition-colors bg-accent hover:bg-brand-dark focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-dark" data-astro-cid-hviy6i6g> en </a> </li><li data-astro-cid-hviy6i6g> <a href="/es/" hreflang="es" lang="es" aria-label="Español" data-lang-choice="es" class="flex size-nav items-center justify-center font-display font-black uppercase text-nav-label text-ink-inverted transition-colors bg-accent hover:bg-brand-dark focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-dark" data-astro-cid-hviy6i6g> es </a> </li> </ul> </div> <!-- Painel de contato, alinhado à direita do item Contato (recua o idioma e
+		     o ✕, ver .nav-contact). O pt-1 transparente afasta o painel da barra. --> <div id="nav-contact" class="nav-contact absolute top-full z-20 pt-1" data-astro-cid-hviy6i6g> <div class="flex w-nav-panel flex-col bg-accent p-nav-panel-padding shadow-nav" data-astro-cid-hviy6i6g> <div class="flex h-nav-item items-center gap-sm" data-astro-cid-hviy6i6g> <a href="mailto:petersondrs@gmail.com" class="nav-contact-row min-w-0 flex-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-0" data-astro-cid-hviy6i6g> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="size-nav-item-icon shrink-0" aria-hidden="true" data-astro-cid-hviy6i6g="true">
+<g id="icon/envelope">
+<path id="shape" d="M3 6L12 13L21 6M3 5H21V19H3V5Z" stroke-width="2" stroke-linecap="square" stroke="currentColor" />
+</g>
+</svg> <span class="nav-email" data-email-text data-astro-cid-hviy6i6g>petersondrs@gmail.com</span> </a> <button type="button" class="flex cursor-pointer border-0 bg-transparent p-0 text-ink-inverted hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-0" aria-label="Copiar e-mail" data-copy-email="petersondrs@gmail.com" data-astro-cid-hviy6i6g> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="size-nav-item-icon" aria-hidden="true" data-astro-cid-hviy6i6g="true">
+<g id="icon/copy">
+<path id="shape" d="M16 8V3H3V16H8M8 8H21V21H8V8Z" stroke-width="2" stroke-linecap="square" stroke="currentColor" />
+</g>
+</svg> </button> </div> <a href="https://www.linkedin.com/in/petersonramos" target="_blank" rel="noopener noreferrer" class="nav-contact-row h-nav-item focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-0" data-astro-cid-hviy6i6g> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="size-nav-item-icon shrink-0" aria-hidden="true" data-astro-cid-hviy6i6g="true">
+<g id="icon/external-link">
+<path id="shape" d="M20 10V4H14M20 4L11 13M18 14V20H4V6H10" stroke-width="2" stroke-linecap="square" stroke="currentColor" />
+</g>
+</svg> <span data-astro-cid-hviy6i6g>LinkedIn</span> </a>  <button type="button" class="nav-contact-row h-nav-item cursor-pointer border-0 bg-transparent p-0 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-0" data-cookie-reopen data-astro-cid-hviy6i6g> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="size-nav-item-icon shrink-0" aria-hidden="true" data-astro-cid-hviy6i6g="true">
+<g id="icon/cookie">
+<path id="shape" d="M20.5 12.5A8.5 8.5 0 1 1 11.5 3.5A3 3 0 0 0 15 7.5A3 3 0 0 0 20.5 12.5Z" stroke-width="2" stroke-linecap="square" stroke="currentColor" />
+<path id="chips" d="M8.5 10.5H8.51M12 14H12.01M8.5 16H8.51" stroke-width="2.5" stroke-linecap="square" stroke="currentColor" />
+</g>
+</svg> <span data-astro-cid-hviy6i6g>Cookies</span> </button> <span class="sr-only" aria-live="polite" data-copy-status data-astro-cid-hviy6i6g></span> </div> </div> </div> </nav> <script type="module">const m=document.querySelector(".progressive-blur"),h=document.querySelectorAll("[data-nav]");if(h.length){const s=document.querySelectorAll('[data-nav-tone="dark"]'),o=()=>{h.forEach(a=>{const c=a.querySelector(".nav-back");if(!c)return;const i=c.getBoundingClientRect(),n=i.top+i.height/2,u=[...s].some(g=>{const p=g.getBoundingClientRect();return p.top<=n&&p.bottom>=n&&p.left<=i.right&&p.right>=i.left});a.toggleAttribute("data-tone-dark",u)})};addEventListener("resize",o),o();let r=scrollY,d=!1;const f=()=>{d=!1;const a=Math.max(0,scrollY),c=a-r;if(o(),Math.abs(c)<6&&a>80)return;h.forEach(n=>{const u=n.hasAttribute("data-open")||!!n.querySelector(":focus-visible"),g=a>80&&c>0&&!u;n.toggleAttribute("data-nav-hidden",g)});const i=[...h].some(n=>!n.hasAttribute("data-nav-hidden"));m?.classList.toggle("is-hidden",a<=80||!i),r=a};addEventListener("scroll",()=>{d||(d=!0,requestAnimationFrame(f))},{passive:!0}),h.forEach(a=>a.addEventListener("focusin",()=>{a.removeAttribute("data-nav-hidden"),m?.classList.toggle("is-hidden",scrollY<=80)}))}h.forEach(t=>{const l=t.querySelector("[data-nav-toggle]");if(!l)return;const s=t.querySelector("[data-contact-toggle]"),o=e=>{t.toggleAttribute("data-contact-open",e),s?.setAttribute("aria-expanded",String(e))},r=()=>t.hasAttribute("data-contact-open"),d=t.querySelector("[data-lang-toggle]"),f=e=>{t.toggleAttribute("data-lang-open",e),d?.setAttribute("aria-expanded",String(e))},a=()=>t.hasAttribute("data-lang-open"),c=e=>{t.toggleAttribute("data-open",e),l.setAttribute("aria-expanded",String(e)),l.setAttribute("aria-label",(e?t.dataset.labelClose:t.dataset.labelOpen)??""),e||(o(!1),f(!1))},i=()=>t.hasAttribute("data-open");s?.addEventListener("click",()=>{f(!1),o(!r())}),d?.addEventListener("click",()=>{o(!1),f(!a())}),t.querySelectorAll("[data-lang-choice]").forEach(e=>{e.addEventListener("click",()=>{try{localStorage.setItem(t.dataset.langKey??"",e.dataset.langChoice??"")}catch{}})});const n=t.querySelector("[data-copy-email]"),u=t.querySelector("[data-email-text]"),g=t.querySelector("[data-copy-status]");let p;n?.addEventListener("click",async()=>{const e=n.dataset.copyEmail??"";try{await navigator.clipboard.writeText(e)}catch{return}u&&(u.textContent=t.dataset.labelCopied??""),g&&(g.textContent=t.dataset.labelEmailCopied??""),window.clearTimeout(p),p=window.setTimeout(()=>{u&&(u.textContent=e),g&&(g.textContent="")},1500)}),l.addEventListener("click",()=>c(!i())),t.querySelector("[data-cookie-reopen]")?.addEventListener("click",()=>{c(!1),dispatchEvent(new Event("pr:cookies-open"))}),document.addEventListener("click",e=>{i()&&!t.contains(e.target)&&c(!1)}),document.addEventListener("keydown",e=>{e.key==="Escape"&&(a()?(f(!1),d?.focus()):r()?(o(!1),s?.focus()):i()&&(c(!1),l.focus()))})});const b=document.querySelector("[data-nav-back]");b?.addEventListener("click",t=>{const l=r=>r.replace(/\/$/,"")||"/",s=location.pathname.match(/\/cases\/([^/]+)/)?.[1];let o=!1;try{const r=new URL(document.referrer),d=JSON.parse(sessionStorage.getItem("home-return")||"null");o=r.origin===location.origin&&l(r.pathname)===l(b.pathname)&&!!s&&d?.slug===s}catch{}if(o&&history.length>1){t.preventDefault(),history.back();return}try{s&&sessionStorage.setItem("home-return",JSON.stringify({slug:s,pending:!0}))}catch{}});</script> </div> <div class="hero-copy relative z-10 flex flex-col gap-hero-stack whitespace-nowrap" data-astro-cid-pgpo2ev5> <h1 class="m-0 font-display font-black uppercase text-hero-name text-ink" data-astro-cid-pgpo2ev5> <span class="block" data-astro-cid-pgpo2ev5>Peterson</span> <span class="block" data-astro-cid-pgpo2ev5>Ramos</span> </h1> <p class="m-0 font-body font-bold text-hero-role text-accent" data-astro-cid-pgpo2ev5> <span class="block" data-astro-cid-pgpo2ev5>Sênior UX/UI</span> <span class="block" data-astro-cid-pgpo2ev5>designer</span> </p> </div> <div class="hero-photo" data-astro-cid-pgpo2ev5> <picture data-astro-cid-pgpo2ev5> <source type="image/avif" srcset="/_astro/peterson-hero.BTU0qnbd_obV15.avif 256w, /_astro/peterson-hero.BTU0qnbd_2kyyma.avif 512w, /_astro/peterson-hero.BTU0qnbd_Z42Rgj.avif 768w, /_astro/peterson-hero.BTU0qnbd_rY1mQ.avif 1024w" sizes="(min-width: 150rem) 1480px, (min-width: 112.5rem) 1110px, (min-width: 75rem) 835px, 100vw" width="1024" height="1024" data-astro-cid-pgpo2ev5><source type="image/webp" srcset="/_astro/peterson-hero.BTU0qnbd_Z2ayivB.webp 256w, /_astro/peterson-hero.BTU0qnbd_ZebFaw.webp 512w, /_astro/peterson-hero.BTU0qnbd_2ro20V.webp 768w, /_astro/peterson-hero.BTU0qnbd_2iihej.webp 1024w" sizes="(min-width: 150rem) 1480px, (min-width: 112.5rem) 1110px, (min-width: 75rem) 835px, 100vw" width="1024" height="1024" data-astro-cid-pgpo2ev5> <img src="/_astro/peterson-hero.BTU0qnbd_2iihej.webp" alt="Retrato de Peterson Ramos" width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async" class="absolute block h-auto max-w-none" data-astro-cid-pgpo2ev5> </picture> </div> </section> <section aria-label="Cases" class="flex flex-col"> <a href="/cases/sesi-cidadania/" class="case-highlight group relative block overflow-hidden bg-gray-200 no-underline" data-case-hero data-snap="center" data-case-slug="sesi-cidadania" aria-label="Ver case: SESI Cidadania contra fome" data-astro-cid-ecgrnnyh> <picture data-astro-cid-ecgrnnyh> <source media="(max-width: 47.99rem)" type="image/avif" srcset="/_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_ZkIPxX.avif 480w, /_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_Z1vQ96G.avif 768w, /_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_Z1IE5Mo.avif 1152w, /_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_ZbG8Gi.avif 1536w" sizes="max(100vw, 52svh)" data-astro-cid-ecgrnnyh><source media="(max-width: 47.99rem)" type="image/webp" srcset="/_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_Z2630Bt.webp 480w, /_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_Z7oESa.webp 768w, /_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_10HAwo.webp 1152w, /_astro/hero_homepage_case_sesi_mobile_1x.BRXVBiVm_Z2wvAbr.webp 1536w" sizes="max(100vw, 52svh)" data-astro-cid-ecgrnnyh> <source type="image/avif" srcset="/_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_Z1nuCTC.avif 640w, /_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_QDEYT.avif 1280w, /_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_Z2vNOQt.avif 1920w, /_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_Z1y5UHO.avif 2560w" sizes="max(100vw, 164svh)" data-astro-cid-ecgrnnyh><source type="image/webp" srcset="/_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_VPiT.webp 640w, /_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_Z1taLuf.webp 1280w, /_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_1awm5X.webp 1920w, /_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_28fgeC.webp 2560w" sizes="max(100vw, 164svh)" data-astro-cid-ecgrnnyh> <img src="/_astro/hero_homepage_case_sesi_desktop_1x.lvbHO1RT_Z1taLuf.webp" alt="" loading="lazy" decoding="async" class="absolute inset-0 block size-full object-cover" data-astro-cid-ecgrnnyh> </picture> <div class="relative grid min-h-svh gap-y-case-gap px-page-x py-home-case-y md:grid-cols-2 md:gap-x-grid-gap md:gap-y-0 content-center" data-astro-cid-ecgrnnyh> <div class="case-highlight__copy flex flex-col justify-end gap-4 font-display text-h5 md:col-start-1 md:row-start-1 text-gray-0" data-astro-cid-ecgrnnyh> <h2 class="m-0 font-black" data-astro-cid-ecgrnnyh>SESI Cidadania contra fome</h2> <p class="m-0 font-bold opacity-80" data-astro-cid-ecgrnnyh>A plataforma de doação que arrecadou R$ 750 mil na pandemia de Covid-19</p> </div> <div class="order-first flex justify-center md:order-none md:col-start-2 md:row-start-1 md:items-center md:justify-end" data-astro-cid-ecgrnnyh> <div class="case-highlight__device relative" style="aspect-ratio: 1672 / 2546; --device-ratio: 0.6567164179104478" data-astro-cid-ecgrnnyh>  <picture class data-astro-cid-ecgrnnyh> <source type="image/avif" srcset="/_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_22iDkX.avif 418w, /_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_Z2cLnMz.avif 836w, /_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_Z1iKCon.avif 1254w, /_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_12sK4D.avif 1672w" sizes="(min-width: 150rem) calc((50vw - 20rem - 2.25rem) * 0.905), (min-width: 112.5rem) calc((50vw - 15rem - 2.25rem) * 0.905), (min-width: 75rem) calc((50vw - 12rem - 2.25rem) * 0.905), calc((50vw - 3rem - 2.25rem) * 0.905)" data-astro-cid-ecgrnnyh><source type="image/webp" srcset="/_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_gYths.webp 418w, /_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_ZNjTz3.webp 836w, /_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_1qB3Up.webp 1254w, /_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_Z1ilGpv.webp 1672w" sizes="(min-width: 150rem) calc((50vw - 20rem - 2.25rem) * 0.905), (min-width: 112.5rem) calc((50vw - 15rem - 2.25rem) * 0.905), (min-width: 75rem) calc((50vw - 12rem - 2.25rem) * 0.905), calc((50vw - 3rem - 2.25rem) * 0.905)" data-astro-cid-ecgrnnyh> <img src="/_astro/hero_homepage_case_sesi_device_1x.CfBO23eU_BvCop.webp" alt="" width="1672" height="2546" loading="lazy" decoding="async" class="absolute block max-w-none transition-transform duration-700 ease-out group-hover:scale-[1.02]" style="left:0%;top:0%;width:100%;height:100%;border-radius:3.59% / 2.36%;box-shadow:0 1.5rem 3rem rgb(0 0 0 / 0.35)" data-astro-cid-ecgrnnyh> </picture> <div class="case-highlight__btn" data-astro-cid-ecgrnnyh> <span class="case-button" aria-hidden="true" data-astro-cid-5yl5xskq> <span class="link-marker" data-astro-cid-5yl5xskq> Ver case <span class="link-marker-fill" aria-hidden="true" data-astro-cid-5yl5xskq> <span class="link-marker-fill-text" data-astro-cid-5yl5xskq>Ver case</span> </span> </span> </span> </div> </div> </div> </div> </a><a href="/cases/modulo-c4i/" class="case-highlight group relative block overflow-hidden bg-gray-200 no-underline" data-case-hero data-snap="center" data-case-slug="modulo-c4i" aria-label="Ver case: Comando e Controle: Copa 2014" data-astro-cid-ecgrnnyh> <picture data-astro-cid-ecgrnnyh> <source media="(max-width: 47.99rem)" type="image/avif" srcset="/_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_2voQMM.avif 480w, /_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_OIpTV.avif 768w, /_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_Ze77cq.avif 1152w, /_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_WTzFl.avif 1536w" sizes="max(100vw, 53svh)" data-astro-cid-ecgrnnyh><source media="(max-width: 47.99rem)" type="image/webp" srcset="/_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_K5GJh.webp 480w, /_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_2eaT8s.webp 768w, /_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_2vfz7m.webp 1152w, /_astro/hero_homepage_case_cicc_mobile_1x.CKw9JCnp_Z1mTQNN.webp 1536w" sizes="max(100vw, 53svh)" data-astro-cid-ecgrnnyh> <source type="image/avif" srcset="/_astro/hero_homepage_case_cicc_desktop_1x.7UzM-Zyy_Z1o5Ga1.avif 640w, /_astro/hero_homepage_case_cicc_desktop_1x.7UzM-Zyy_UbOlh.avif 1280w, /_astro/hero_homepage_case_cicc_desktop_1x.7UzM-Zyy_Z1QmH7F.avif 1920w" sizes="max(100vw, 166svh)" data-astro-cid-ecgrnnyh><source type="image/webp" srcset="/_astro/hero_homepage_case_cicc_desktop_1x.7UzM-Zyy_lM3v.webp 640w, /_astro/hero_homepage_case_cicc_desktop_1x.7UzM-Zyy_Z1pCC8R.webp 1280w, /_astro/hero_homepage_case_cicc_desktop_1x.7UzM-Zyy_1OXtOL.webp 1920w" sizes="max(100vw, 166svh)" data-astro-cid-ecgrnnyh> <img src="/_astro/hero_homepage_case_cicc_desktop_1x.7UzM-Zyy_Z1pCC8R.webp" alt="" loading="lazy" decoding="async" class="absolute inset-0 block size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-astro-cid-ecgrnnyh> </picture> <div class="relative grid min-h-svh gap-y-case-gap px-page-x py-home-case-y md:grid-cols-2 md:gap-x-grid-gap md:gap-y-0 content-end" data-astro-cid-ecgrnnyh> <div class="case-highlight__copy flex flex-col justify-end gap-4 font-display text-h5 md:col-start-1 md:row-start-1 text-gray-0" data-astro-cid-ecgrnnyh> <h2 class="m-0 font-black" data-astro-cid-ecgrnnyh>Comando e Controle: Copa 2014</h2> <p class="m-0 font-bold opacity-80" data-astro-cid-ecgrnnyh>Polícias, bombeiros, guarda municipal e SUS operando juntos, pela primeira vez, nas 12 cidades-sede da Copa 2014. Design entregue em 6 meses.</p> </div> <div class="case-highlight__btn" data-astro-cid-ecgrnnyh> <span class="case-button" aria-hidden="true" data-astro-cid-5yl5xskq> <span class="link-marker" data-astro-cid-5yl5xskq> Ver case <span class="link-marker-fill" aria-hidden="true" data-astro-cid-5yl5xskq> <span class="link-marker-fill-text" data-astro-cid-5yl5xskq>Ver case</span> </span> </span> </span> </div> </div> </a> </section> </main> <div class="case-cursor" data-case-cursor aria-hidden="true" data-astro-cid-zuo2wnby> <span class="case-button" aria-hidden="true" data-astro-cid-5yl5xskq> <span class="link-marker" data-astro-cid-5yl5xskq> Ver case <span class="link-marker-fill" aria-hidden="true" data-astro-cid-5yl5xskq> <span class="link-marker-fill-text" data-astro-cid-5yl5xskq>Ver case</span> </span> </span> </span> </div> <script type="module">const a=document.querySelector("[data-case-cursor]"),p=document.querySelectorAll("[data-case-hero]"),E=window.matchMedia("(hover: hover) and (pointer: fine)");if(a&&p.length&&E.matches){document.documentElement.dataset.caseCursorReady="";const m=2,f=2;let n=0,r=0,t=!1,c=!1;const i=e=>e.pointerType==="touch",o=e=>e instanceof Element?e.closest("[data-case-hero]"):null,d=()=>{a.style.transform=`translate(${n+m}px, ${r+f}px)`},h=()=>{c=!1,d()},u=(e,s)=>{n=e,r=s,c||(c=!0,requestAnimationFrame(h))},v=(e,s)=>{if(n=e,r=s,!t){t=!0,d(),a.classList.add("is-on");return}u(e,s)},l=()=>{t&&(t=!1,a.classList.remove("is-on"))};document.addEventListener("pointerover",e=>{i(e)||!o(e.target)||v(e.clientX,e.clientY)}),document.addEventListener("pointermove",e=>{!t||i(e)||!o(e.target)||u(e.clientX,e.clientY)},{passive:!0}),document.addEventListener("pointerout",e=>{!o(e.target)||o(e.relatedTarget)||l()}),addEventListener("scroll",()=>{if(!t)return;document.elementFromPoint(n,r)?.closest("[data-case-hero]")||l()},{passive:!0})}</script> <script type="module">const t="home-return",o=()=>{try{return JSON.parse(sessionStorage.getItem(t)||"null")}catch{return null}},s=o();try{sessionStorage.removeItem(t)}catch{}const n=performance.getEntriesByType("navigation")[0],c=n?.type==="back_forward",a=s&&document.querySelector(`[data-case-slug="${CSS.escape(s.slug)}"]`);a&&(c||s.pending)&&("scrollRestoration"in history&&(history.scrollRestoration="manual"),a.scrollIntoView({block:"center",behavior:"instant"}));document.querySelectorAll("[data-case-slug]").forEach(e=>{e.addEventListener("click",()=>{try{sessionStorage.setItem(t,JSON.stringify({slug:e.dataset.caseSlug}))}catch{}})});addEventListener("pageshow",e=>{if(!e.persisted)return;const r=o();try{sessionStorage.removeItem(t)}catch{}(r&&document.querySelector(`[data-case-slug="${CSS.escape(r.slug)}"]`))?.scrollIntoView({block:"center",behavior:"instant"})});</script> <script type="module" src="/_astro/SmoothScroll.astro_astro_type_script_index_0_lang.VuBtUxyv.js"></script>  <div class="progressive-blur is-hidden" aria-hidden="true" data-astro-cid-kimymvsu> <div class="progressive-blur__layer is--1" data-astro-cid-kimymvsu></div> <div class="progressive-blur__layer is--2" data-astro-cid-kimymvsu></div> <div class="progressive-blur__layer is--3" data-astro-cid-kimymvsu></div> </div> <section class="cookie-banner" aria-label="Aviso de cookies" data-cookie-banner data-consent-key="pr-consent" hidden data-astro-cid-fzbxxtek><p class="m-0 font-body text-body-sm text-ink" data-astro-cid-fzbxxtek>Uso cookies do Google Analytics para entender como o site é visitado. Nada de anúncios.</p><div class="flex shrink-0 gap-sm" data-astro-cid-fzbxxtek><button type="button" class="cookie-btn cookie-btn--ghost" data-consent="denied" data-astro-cid-fzbxxtek>Recusar</button><button type="button" class="cookie-btn cookie-btn--primary" data-consent="granted" data-astro-cid-fzbxxtek>Aceitar</button></div></section><script type="module">const e=document.querySelector("[data-cookie-banner]");if(e){const n=e.dataset.consentKey??"";let t=null;try{t=localStorage.getItem(n)}catch{}t!=="granted"&&t!=="denied"&&(e.hidden=!1),e.querySelectorAll("[data-consent]").forEach(a=>{a.addEventListener("click",()=>{const c=a.dataset.consent;try{localStorage.setItem(n,c)}catch{}window.gtag?.("consent","update",{analytics_storage:c}),e.hidden=!0})}),addEventListener("pr:cookies-open",()=>{e.hidden=!1,e.querySelector("[data-consent]")?.focus()})}</script></body></html>
