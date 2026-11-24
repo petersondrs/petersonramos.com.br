@@ -16,6 +16,11 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  # actions: read é o que deixa o deploy-pages listar o artefato do próprio run
+  # pela API de Actions. Sem ele, o passo sobe o artefato, o deploy falha com
+  # "No artifacts named github-pages were found" e o site segue no build
+  # anterior (nov/2026).
+  actions: read
 
 concurrency:
   group: pages
